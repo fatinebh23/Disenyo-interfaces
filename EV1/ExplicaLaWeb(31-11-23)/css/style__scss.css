@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Calistoga|Roboto:400,700&display=swap");
+body {
+  font: 400 1rem "Roboto", sans-serif;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 600px;
+}
+
+h1 {
+  font-family: "Calistoga", cursive;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Calistoga", cursive;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Calistoga", cursive;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: "Calistoga", cursive;
+  font-weight: 400;
+}
+
+h5 {
+  font-family: "Calistoga", cursive;
+  font-weight: 400;
+}
+
+header {
+  background-color: #4E6379;
+  padding: 1rem;
+  display: flex;
+}
+header img {
+  height: 8rem;
+}
+header div {
+  text-align: center;
+  width: 90%;
+  color: #FFF;
+  padding: 1rem 0 0 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin: 0.5rem 0 0 0;
+  text-align: center;
+  justify-content: space-between;
+}
+nav ul li {
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  background-color: #ddc3d2;
+  width: 12%;
+  padding: 1rem 0;
+}
+nav ul li a {
+  color: #4E6379;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  font-weight: 700;
+}
+
+div.contenedor {
+  display: flex;
+}
+
+section {
+  background-color: rgba(191, 201, 51, 0.14);
+  width: 69%;
+  margin: 0.5rem 1% 0 0;
+  padding: 1% 1% 0 1%;
+}
+section article {
+  margin: 0 0 0.5rem 0;
+  background-color: rgba(12, 121, 39, 0.08);
+  padding: 1rem;
+}
+section article img {
+  height: 7rem;
+  float: left;
+}
+section article div {
+  text-align: center;
+  height: 7rem;
+}
+section article div h3 {
+  margin: 0;
+  padding-top: 2.5rem;
+}
+section article div h4 {
+  margin: 0;
+}
+section article p {
+  margin: 1rem 0 0 0;
+}
+
+aside {
+  background-color: rgba(79, 195, 247, 0.18);
+  width: 26%;
+  padding: 1%;
+  margin: 0.5rem 0 0 0;
+}
+
+footer {
+  margin: 0.5rem 0 0 0;
+  padding: 0.5rem;
+  background-color: rgba(150, 34, 30, 0.42);
+  color: #FFF;
+  text-align: center;
+}/*# sourceMappingURL=style__scss.css.map */

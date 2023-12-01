@@ -1,0 +1,36 @@
+a:link {
+    color: black;
+ }
+ 
+ 
+ a:visited {
+    color: green;
+ }
+ 
+ 
+ a:hover {
+    color: chocolate;
+    font-size: x-large;
+ }
+ 
+ 
+ a:first-of-type {
+    font-weight: 900;
+ }
+ 
+ 
+ a:last-of-type {
+    background-color: aqua;
+ }
+ 
+ 
+ p {
+    display: none;
+    padding: 20px;
+ }
+ 
+ 
+ div:hover p {
+    display: block;
+ }
+ 

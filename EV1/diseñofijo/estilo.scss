@@ -1,0 +1,38 @@
+@import 'variables';
+@import 'nesting';
+@import 'mixin';
+
+@import 'extend';
+nav {
+    @extend %nav-styles;
+  }
+header {
+    text-align: center;
+}
+.datosdellibro{
+    width: 260px;
+  
+}
+
+main,h1{
+   
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.segundaparte{
+    width: 700px;
+  
+}
+.flex-container {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    
+    padding: 0;
+  }
+  
+  .flex-container li {
+    flex: 1;
+  
+}

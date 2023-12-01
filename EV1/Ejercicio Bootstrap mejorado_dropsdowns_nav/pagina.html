@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-expand-lg  navbar-success bg-success">
+        <a class="navbar-brand" href="#">
+            <img src="logo_correcte.png" style="width:40px;" class="rounded-pill">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+
+                <a class="nav-item nav-link"
+                    href="https://www.w3schools.com/bootstrap5/bootstrap_dropdowns.php">Dropdowns</a>
+                <a class="nav-item nav-link"
+                    href="https://www.w3schools.com/bootstrap5/bootstrap_collapse.php">Collapse</a>
+                <a class="nav-item nav-link" href="https://www.w3schools.com/bootstrap5/bootstrap_navbar.php">Navbar</a>
+              
+
+            </div>
+        </div>
+    </nav>
+    <p class="d-flex justify-content-end">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+          Menú offcanvas
+        </button>
+      </p>
+  
+      <div class="offcanvas offcanvas-end text-bg-dark" id="demo">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">Heading</h1>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="https://getbootstrap.com/docs/5.0/components/dropdowns/">Dropdowns</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://getbootstrap.com/docs/5.0/components/collapse/">Collapse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://getbootstrap.com/docs/5.0/components/navbar/">Navbar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+    <h2 data-bs-toggle="tooltip" title="¡Bienvenido!">Esto es una prueba de pagina web</h2>
+    <button type="button" class="btn btn-warning " data-bs-toggle="collapse" data-bs-target="#demo">Muestra/Oculta el
+        texto</button>
+    <div id="demo" class="collapse">
+        Una Página Web es un documento electrónico que forma parte de la WWW
+        (World Wide Web) generalmente construido en el lenguaje HTML (Hyper
+        Text Markup Language o Lenguaje de Marcado de Hipertexto) ó en XHTML
+        (eXtensible Hyper Text Markup Language o Lenguaje de Marcado de
+        Hipertexto Extensible).
+    </div>
+    </div>
+    </button>
+
+
+
+    <h2>Tecnologias</h2>
+    <div class="card">
+        <div class="card-header">
+            <p>
+            <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Hyper Text Markup Language</a>
+                
+                <button type="button" class="btn btn-dark" data-bs-toggle="collapse"
+                    data-bs-target="#collapseHTML">HTML</button>
+            </p>
+            <div id="collapseHTML" class="collapse">
+                <div class="bg-success text-white card card-body">
+                    Una Página Web es un documento electrónico que forma parte de la WWW
+                    (World Wide Web) generalmente construido en el lenguaje HTML (Hyper
+                    Text Markup Language o Lenguaje de Marcado de Hipertexto) ó en XHTML
+                    (eXtensible Hyper Text Markup Language o Lenguaje de Marcado de
+                    Hipertexto Extensible).
+                </div>
+            </div>
+        </div>
+        <div class="card-header">
+            <p><button type="button" class="btn btn-secondary" data-bs-toggle="collapse"
+                    data-bs-target="#collapseCSS">CSS</button></p>
+            <div id="collapseCSS" class="collapse">
+                <div class=" card card-body text-primary">
+                    Una Página Web es un documento electrónico que forma parte de la WWW
+                    (World Wide Web) generalmente construido en el lenguaje HTML (Hyper
+                    Text Markup Language o Lenguaje de Marcado de Hipertexto) ó en XHTML
+                    (eXtensible Hyper Text Markup Language o Lenguaje de Marcado de
+                    Hipertexto Extensible).
+                </div>
+            </div>
+        </div>
+
+        <div class="card-header">
+            <p><button type="button" class="btn btn-success" data-bs-toggle="collapse"
+                    data-bs-target="#collapseJS">JavaScript</button></p>
+            <div id="collapseJS" class="collapse">
+                <div class=" card card-body text-warning">
+                    Una Página Web es un documento electrónico que forma parte de la WWW
+                    (World Wide Web) generalmente construido en el lenguaje HTML (Hyper
+                    Text Markup Language o Lenguaje de Marcado de Hipertexto) ó en XHTML
+                    (eXtensible Hyper Text Markup Language o Lenguaje de Marcado de
+                    Hipertexto Extensible).
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    </div>
+
+
+    <h2>Ejemplos</h2>
+    <h6>Haz click sobre el boton para acceder a los enlaces a diversos ejemplos de pagina web</h6>
+
+    <div class="dropdown">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"> Ejemplos web</button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item text-warning" href="https://www.pennyjuice.com/">pennyjuice</a></li>
+            <li><a class="dropdown-item " href="https://www.louvre.fr/en/online-tours">louvre</a></li>
+            <li><a class="dropdown-item text-danger" href="https://www.lingscars.com/">lingscars</a></li>
+        </ul>
+    </div>
+
+
+
+    <!-- Carousel -->
+    <p>
+    <div>
+        </p>
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                <buttontesx type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="berlin.jpg" alt="Berlin" class="d-block w-100" />
+                    <div class="carousel-caption">
+                        <h3>Budapest</h3>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item">
+                    <img src="austria.jpg" alt="Austria" class="d-block w-100" />
+                    <div class="carousel-caption">
+                        <h3>Austria</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="budapest.jpg" alt="Budapest" class="d-block w-100" />
+                    <div class="carousel-caption">
+                        <h3>Budapest</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="suiza.jpg" alt="suiza" class="d-block w-100" />
+                    <div class="carousel-caption">
+                        <h3>Suiza</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="zagreb.jpg" alt="Zagreb" class="d-block w-100" />
+                    <div class="carousel-caption">
+                        <h3>Zagreb</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+
+   <!-- Button to Open the Modal -->
+   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+    Atención
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal body -->
+        <div class="modal-body">
+          En España suelen abrir el 24 de diciembre. Por ejemplo, el
+          mercadillo de Navidad de la Plaza Mayor de Madrid es uno de los
+          más importantes de Europa y este 2023 abrirá desde el 24 de
+          noviembre hasta el 31 de diciembre. Los horarios son de domingo a
+          jueves de 10:00 a 21:00 horas y viernes, sábados y vísperas de
+          festivo de 10:00 a 22:00 horas.
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+
+  
+
+    <div id="HTML" class="container-fluid bg-success text-white" style="padding: 100px 20px">
+        <h2>HTML</h2>
+        <p>
+          El Lenguaje de Marcado de Hipertexto (HTML) es el código que se
+          utiliza para estructurar y desplegar una página web y sus contenidos.
+          Por ejemplo, sus contenidos podrían ser párrafos, una lista con
+          viñetas, o imágenes y tablas de datos.
+        </p>
+        <p>
+          El Lenguaje de Marcado de Hipertexto (HTML) es el código que se
+          utiliza para estructurar y desplegar una página web y sus contenidos.
+          Por ejemplo, sus contenidos podrían ser párrafos, una lista con
+          viñetas, o imágenes y tablas de datos.
+        </p>
+      </div>
+  
+      <div id="CSS" class="container-fluid bg-warning" style="padding: 100px 20px">
+        <h2>CSS</h2>
+        <p>
+          CSS son las siglas en inglés para «hojas de estilo en cascada»
+          (Cascading Style Sheets). Básicamente, es un lenguaje que maneja el
+          diseño y presentación de las páginas web, es decir, cómo lucen cuando
+          un usuario las visita. Funciona junto con el lenguaje HTML que se
+          encarga del contenido básico de los sitios. Se les denomina hojas de
+          estilo «en cascada» porque puedes tener varias y una de ellas con las
+          propiedades heredadas (0 «en cascada») de otras. Para muchas personas,
+          una simple plantilla de blog es suficiente. Aun así, cuando quieras
+          personalizar la apariencia de un sitio, necesitarás implementar CSS
+          que, en conjunto con un buen CMS, te ayudará a potenciar el alcance de
+          tu contenido.
+        </p>
+        <p>
+          CSS son las siglas en inglés para «hojas de estilo en cascada»
+          (Cascading Style Sheets). Básicamente, es un lenguaje que maneja el
+          diseño y presentación de las páginas web, es decir, cómo lucen cuando
+          un usuario las visita. Funciona junto con el lenguaje HTML que se
+          encarga del contenido básico de los sitios. Se les denomina hojas de
+          estilo «en cascada» porque puedes tener varias y una de ellas con las
+          propiedades heredadas (0 «en cascada») de otras. Para muchas personas,
+          una simple plantilla de blog es suficiente. Aun así, cuando quieras
+          personalizar la apariencia de un sitio, necesitarás implementar CSS
+          que, en conjunto con un buen CMS, te ayudará a potenciar el alcance de
+          tu contenido.
+        </p>
+      </div>
+  
+      <div id="JavaScript" class="container-fluid bg-secondary text-white" style="padding: 100px 20px">
+        <h2>JavaScript</h2>
+        <p>
+          JavaScript es un lenguaje de programación o de secuencias de comandos
+          que te permite implementar funciones complejas en páginas web. Cada
+          vez que una página hace algo más que sentarse allí y mostrar
+          información estática para que la veas, muestra oportunas
+          actualizaciones de contenido, mapas interactivos, animación de
+          Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo,
+          etc., puedes apostar que probablemente JavaScript está involucrado. Es
+          la tercera capa del pastel de las tecnologías web estándar, dos de las
+          cuales (HTML y CSS) hemos cubierto con mucho más detalle en otras
+          partes del Área de aprendizaje.
+        </p>
+        <p>
+          JavaScript es un lenguaje de programación o de secuencias de comandos
+          que te permite implementar funciones complejas en páginas web. Cada
+          vez que una página hace algo más que sentarse allí y mostrar
+          información estática para que la veas, muestra oportunas
+          actualizaciones de contenido, mapas interactivos, animación de
+          Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo,
+          etc., puedes apostar que probablemente JavaScript está involucrado. Es
+          la tercera capa del pastel de las tecnologías web estándar, dos de las
+          cuales (HTML y CSS) hemos cubierto con mucho más detalle en otras
+          partes del Área de aprendizaje.
+        </p>
+      </div>
+
+
+
+
+
+
+
+</body>
+  
+  <script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+  });
+
+  var popoverTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="popover"]')
+    );
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl);
+    });
+  </script>
+
+</html>

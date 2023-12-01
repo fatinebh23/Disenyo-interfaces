@@ -1,0 +1,51 @@
+//Comentado por fatine:
+//He corregido la esctructura de carpetas, organizadolo todo por una carpeta "css"y "img"
+//variables de fuente
+$font-size: 1rem;
+$font-family-cuerpo: 'Roboto', sans-serif; //define el tipo de fuente para el cuerpo
+$font-family-titulos: 'Calistoga', cursive;//define el tipo de fuente para titulos
+$font-weights: ("regular": 400, "bold": 700);//Define un mapa  de pesos de fuente que asigna nombres a valores numéricos para los pesos de fuente. 
+//Define el ancho
+$max-width: 1200px;
+$min-width: 600px;
+//define el margen y el relleno 
+$margin-default: 0;
+$padding-default: 0;
+
+//Este mixin crea estilos para títulos (h1 a h5) utilizando un bucle @for. Aplica el tipo de fuente y un peso de fuente "regular" a estos elementos.
+@mixin fuente-titulos{
+
+    @for $i from 1 through 5{
+  
+      h#{$i}{
+        font-family: $font-family-titulos;
+        font-weight: map-get($font-weights,"regular");
+        }
+  
+    }
+  
+  }
+  
+//esto ayuda reutilizar y la gestion de colores en la hoja de estilo
+$colores: (
+    'cuerpo': #000,
+    'destacado': #FFF,
+    'header': #4E6379,
+    'nav': #ddc3d2,
+    'section': rgba(191, 201, 51, 0.14),
+    'article': rgba(12, 121, 39, 0.08),
+    'aside': rgba(79, 195, 247, 0.18),
+    'footer': rgba(150, 34, 30, 0.42),
+    'enlace': #4E6379,
+);
+//Este mixin define estilos para listas no ordenadas que se muestran horizontalmente 
+@mixin ul-horizontal{
+    list-style: none;
+    display: flex;
+    padding: $padding-default;//se ultiza el padding y el margin para espaciado en elementos de la lista y elementos de lista dentro de la misma.
+    margin: $margin-default;
+    li{
+        padding: $padding-default;
+        margin: $margin-default;
+    }
+}

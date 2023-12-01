@@ -1,0 +1,17 @@
+// Variables: crea variables para dar color al texto de una página, a su fondo y para definir la anchura de un elemento. Y utilízalos, claro.
+$text-color: #b61414;
+$bg-color: #f0f0f0;
+$element-width: 330px;
+
+//Variables: añade una variable global que defina el tipo de letra.
+$font-family: "serif";
+
+main,h1{
+    color: $text-color;
+    background-color: $bg-color;
+    font-family: $font-family;
+}
+h1{
+    width: $element-width; 
+    
+}
