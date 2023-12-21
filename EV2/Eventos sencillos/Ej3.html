@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Alerta Reutilizable</title>
+   
+</head>
+<body>
+
+<button onclick="mostrarAlerta(this)">Pulsa aquí (botón)</button>
+<div onclick="mostrarAlerta(this)">Pulsa aquí (div)</div>
+
+<script>
+    function mostrarAlerta(elemento) {
+        alert("Pulsaste sobre el " + (elemento.tagName.toLowerCase() === 'button' ? 'botón' : 'div'));
+    }
+</script>
+
+</body>
+</html>

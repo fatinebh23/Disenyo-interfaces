@@ -1,0 +1,42 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  gap: 10px 10px;
+  grid-template-areas:
+    "header header header header"
+    "datos descripcion descripcion descripcion"
+    "datos contenido contenido contenido"
+    "datos columnas columnas columnas";
+  padding: 0 10vw 0 10vw;
+}
+.header {
+  grid-area: header;
+  text-align: center;
+}
+.datos {
+  grid-area: datos;
+}
+.descripcion {
+  grid-area: descripcion;
+}
+.contenido {
+  grid-area: contenido;
+}
+.columnas {
+  grid-area: columnas;
+}
+
+.lista-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.lista-grid li {
+  padding: 10px;
+}
+
+

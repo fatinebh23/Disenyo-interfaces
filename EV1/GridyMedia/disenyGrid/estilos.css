@@ -1,0 +1,87 @@
+body{
+  background-color: rgb(110, 189, 241);
+  font-size: 12px;
+
+  @media all and (min-width: 600px){
+    background-color: rgb(209, 209, 84);
+    font-size: 20px;
+  }
+  @media all and (min-width: 1000px) {
+    font-size: 30px;
+  }
+
+}
+
+.container {
+ font-size: 12px;
+
+@media all and (min-width: 600px){
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "header header header header"
+    "datos descripcion descripcion descripcion"
+    "datos contenido contenido contenido"
+    "datos columnas columnas columnas";
+    padding: 30px;;
+    font-size: 20px;
+}
+@media all and (min-width: 1000px) {
+  font-size: 30px;
+  padding: 30px;
+}
+
+}
+.cabecera {
+  grid-area: header;
+  text-align: center;
+}
+.datos-libro {
+  grid-area: datos;
+}
+.descripcion-libro {
+  grid-area: descripcion;
+}
+.contenido-libro {
+  grid-area: contenido;
+}
+.columnas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+.columnas {
+  grid-area: columnas;
+}
+
+.menu_ul_li {
+  float: none;
+
+  @media all and (min-width: 600px) {
+    float: right;
+  }
+}
+
+.menu_ul_li a {
+  display: block;
+  color: rgb(24, 22, 22);
+  text-align: center;
+  text-decoration: none;
+
+  @media all and (min-width: 600px) {
+    padding: 14px 16px;
+  }
+}
+
+.menu_ul_li a{
+  background-color: #555;
+}
+ul {
+  list-style: none;
+  margin: 0;
+
+  @media all and (min-width: 600px) {
+    padding: 0;
+  }
+}

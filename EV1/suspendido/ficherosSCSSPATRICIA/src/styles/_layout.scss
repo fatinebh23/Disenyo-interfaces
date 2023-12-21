@@ -1,0 +1,10 @@
+// 3.- Nesting: utiliza nesting para definir el formato 
+// de párrafos y listas que se encuentren dentro de un elemento nav.
+
+
+@import 'mixinNav';
+
+div {
+    @include mixinNav;
+}
+

@@ -1,0 +1,68 @@
+div p {
+  font-size: 16px;
+}
+div nav {
+  background-color: rgba(211, 211, 211, 0.5);
+  color: #fff;
+}
+div nav ul {
+  list-style: none;
+}
+div nav ul li {
+  padding: 5px;
+  margin: 5px;
+}
+div nav ul li a {
+  color: #3498db;
+}
+div nav ul li a:hover {
+  color: #e74c3c;
+}
+
+.container {
+  background-color: rgba(211, 211, 211, 0.5);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  gap: 10px 10px;
+  grid-template-areas: "header header header header" "datos descripcion descripcion descripcion" "datos contenido contenido contenido" "datos columnas columnas columnas";
+  padding: 0 10vw 0 10vw;
+  font-size: 1.1em;
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+  color: #3498db;
+  width: 300px;
+}
+
+.datos {
+  grid-area: datos;
+}
+
+.descripcion {
+  grid-area: descripcion;
+}
+
+.contenido {
+  grid-area: contenido;
+}
+
+.columnas {
+  grid-area: columnas;
+}
+
+.lista-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.lista-grid li {
+  padding: 10px;
+}
+
+/*# sourceMappingURL=main.css.map */
