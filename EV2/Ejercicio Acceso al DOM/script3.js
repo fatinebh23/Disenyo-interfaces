@@ -1,84 +1,67 @@
-$(document).ready(function() {
-    const memoryGame = $("#memory-game");
+const totalCards = 12;
+const availableCards = ['A', 'K', 'Q', 'J'];
+let cards = [];
+let selectedCards = [];
+let valuesUsed = [];
+let currentMove = 0;
+let currentAttempts = 0;
 
-    const photoArray = [
-        "foto1.jpg",
-        "foto2.jpg",
-        "foto3.jpg",
-        "foto4.jpg",
-        "foto1.jpg", // Matching pair
-        "foto2.jpg", // Matching pair
-        "foto3.jpg", // Matching pair
-        "foto4.jpg"  // Matching pair
-    ];
+let cardTemplate = '<div class="card"><div class="back"></div><div class="face"></div></div>';
 
-    shuffleArray(photoArray);
+function activate(e) {
+   if (currentMove < 2) {
+      
+      if ((!selectedCards[0] || selectedCards[0] !== e.target) && !e.target.classList.contains('active') ) {
+         e.target.classList.add('active');
+         selectedCards.push(e.target);
 
-    $.each(photoArray, function(index, imageUrl) {
-        const card = $("<div>").addClass("card").attr("data-index", index).click(flipCard);
+         if (++currentMove == 2) {
 
-        const cardImage = $("<img>").attr("src", "detras.jpg").appendTo(card);
+            currentAttempts++;
+            document.querySelector('#stats').innerHTML = currentAttempts + ' intentos';
 
-        memoryGame.append(card);
-    });
-
-    const flippedCards = [];
-    let matchedPairs = 0;
-
-    function flipCard() {
-        const clickedCard = $(this);
-        const clickedIndex = clickedCard.data("index");
-
-        if (flippedCards.length < 2 && !flippedCards.includes(clickedIndex)) {
-            flippedCards.push(clickedIndex);
-            showImage(clickedCard);
-
-            if (flippedCards.length === 2) {
-                setTimeout(checkMatch, 500);
+            if (selectedCards[0].querySelectorAll('.face')[0].innerHTML == selectedCards[1].querySelectorAll('.face')[0].innerHTML) {
+               selectedCards = [];
+               currentMove = 0;
             }
-        }
-    }
-
-    function showImage(card) {
-        const cardImage = card.find("img");
-        const index = card.data("index");
-        cardImage.attr("src", photoArray[index]).show();
-    }
-
-    function checkMatch() {
-        const [index1, index2] = flippedCards;
-        const card1 = $(`.card[data-index="${index1}"]`);
-        const card2 = $(`.card[data-index="${index2}"]`);
-
-        if (photoArray[index1] === photoArray[index2]) {
-            matchedPairs++;
-            if (matchedPairs === photoArray.length / 2) {
-                alert("¡Felicidades! Has encontrado todas las parejas.");
+            else {
+               setTimeout(() => {
+                  selectedCards[0].classList.remove('active');
+                  selectedCards[1].classList.remove('active');
+                  selectedCards = [];
+                  currentMove = 0;
+               }, 600);
             }
-        } else {
-            hideImage(card1);
-            hideImage(card2);
-        }
+         }
+      }
+   }
+}
 
-        flippedCards.length = 0;
-    }
+function randomValue() {
+   let rnd = Math.floor(Math.random() * totalCards * 0.5);
+   let values = valuesUsed.filter(value => value === rnd);
+   if (values.length < 2) {
+      valuesUsed.push(rnd);
+   }
+   else {
+      randomValue();
+   }
+}
 
-    function hideImage(card) {
-        const cardImage = card.find("img");
-        cardImage.attr("src", "detras.jpg").hide();
-    }
+function getFaceValue(value) {
+   let rtn = value;
+   if (value < availableCards.length) {
+      rtn = availableCards[value];
+   }
+   return rtn;
+}
 
-    function shuffleArray(array) {
-        let currentIndex = array.length, randomIndex;
-
-        while (currentIndex !== 0) {
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex--;
-
-            [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-        }
-
-        return array;
-    }
-});
-
+for (let i=0; i < totalCards; i++) {
+   let div = document.createElement('div');
+   div.innerHTML = cardTemplate;
+   cards.push(div);
+   document.querySelector('#game').append(cards[i]);
+   randomValue();
+   cards[i].querySelectorAll('.face')[0].innerHTML = getFaceValue(valuesUsed[i]);
+   cards[i].querySelectorAll('.card')[0].addEventListener('click', activate);
+}
