@@ -1,0 +1,88 @@
+
+.gallery {
+    display: flex;
+}
+
+.gallery img {
+    width: 50px;
+    height: 50px;
+  
+    cursor: pointer;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    display: none;
+}
+.link {
+    font-size: 19px;
+    color: #ffffff;
+    text-decoration: none;
+    background: #d54500;
+    padding: 5px 10px;
+    border-radius: .5em;
+ }
+  .link:hover {
+    background: #999;
+ }
+ 
+ #imagenes {
+    margin: 0 auto;
+    width: 635px;
+    z-index: 1;
+ }
+  #botonera{
+    text-align: center;
+    padding: 20px;
+ }
+ 
+ 
+ #imagenes div {
+    float: left;
+    width: 132px;
+    height: 100px;
+    background: #ff8000;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #999;
+    cursor: pointer;
+    border-radius: .5em;
+  box-shadow: 0 1px 2px rgba(0,0,0,.5);
+    z-index: 2;
+ }
+  #imagenes div img {
+    border: none;
+    z-index: 3;
+ }
+ /* ejercicio5 */
+ table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  tr:hover {
+    background-color: lightgray;
+  }
