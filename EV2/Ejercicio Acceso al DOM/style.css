@@ -78,7 +78,7 @@ body {
  
  .card .back {
     border: 3px solid #05d1fe;
-    background: url(images/back.png) center / contain no-repeat;
+    background: url(back.png) center / contain no-repeat;
  }
  /* ejercicio5 */
  table {
